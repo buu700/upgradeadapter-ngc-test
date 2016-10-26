@@ -16,11 +16,6 @@ document.body.setAttribute(
 angular.
 	module(moduleName, []).
 	controller(controllerName, []).
-	config(['$compileProvider', ($compileProvider) =>
-		$compileProvider.
-			aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|sms):/).
-			debugInfoEnabled(false)
-	]).
 	component(
 		Ng1Component.title,
 		Ng1Component.config
