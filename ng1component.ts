@@ -8,8 +8,8 @@ export class Ng1Component {
 		},
 		controller: Ng1Component,
 		template: `
-			<div>Foo: $ctrl.foo</div>
-			<div>Bar: $ctrl.bar</div>
+			<div>Foo: {{$ctrl.foo}}</div>
+			<div>Bar: {{$ctrl.bar}}</div>
 		`
 	};
 
