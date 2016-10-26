@@ -1,7 +1,7 @@
 /// <reference path="./typings/index.d.ts" />
 
 import {AppComponent} from './appcomponent';
-import {UpgradeAdapter} from './appmodule';
+import {upgradeAdapter} from './appmodule';
 import {Ng1Component} from './ng1component';
 
 
@@ -23,11 +23,11 @@ angular.
 	directive(
 		'testApp',
 		<angular.IDirectiveFactory>
-		UpgradeAdapter.downgradeNg2Component(
+		upgradeAdapter.downgradeNg2Component(
 			AppComponent
 		)
 	)
 ;
 
 
-UpgradeAdapter.bootstrap(document.body, [moduleName]);
+upgradeAdapter.bootstrap(document.body, [moduleName]);

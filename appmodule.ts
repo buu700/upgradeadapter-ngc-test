@@ -2,10 +2,10 @@ import {AppComponent} from './appcomponent';
 import {Ng1Component} from './ng1component';
 import {NgModule, forwardRef} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {UpgradeAdapter as NgUpgradeAdapter} from '@angular/upgrade';
+import {UpgradeAdapter} from '@angular/upgrade';
 
 
-export const UpgradeAdapter	= new NgUpgradeAdapter(
+export const upgradeAdapter	= new UpgradeAdapter(
 	forwardRef(() => AppModule)
 );
 
@@ -16,7 +16,7 @@ export const UpgradeAdapter	= new NgUpgradeAdapter(
 	],
 	declarations: [
 		AppComponent,
-		UpgradeAdapter.upgradeNg1Component(
+		upgradeAdapter.upgradeNg1Component(
 			Ng1Component.title
 		)
 	]
