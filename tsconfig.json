@@ -1,0 +1,14 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		 "target": "es6",
+		 "module": "es6",
+		 "moduleResolution": "node",
+		 "emitDecoratorMetadata": true,
+		 "experimentalDecorators": true,
+		 "rootDir": "."
+	},
+	"files": [
+		"main.ts"
+	]
+}
