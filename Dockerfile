@@ -18,14 +18,14 @@ RUN apt-get -y --force-yes dist-upgrade
 RUN apt-get -y --force-yes install build-essential git nano nodejs
 
 RUN npm -g install \
-	@angular/common@2.1.1 \
-	@angular/compiler@2.1.1 \
-	@angular/compiler-cli@2.1.1 \
-	@angular/core@2.1.1 \
-	@angular/platform-browser@2.1.1 \
-	@angular/platform-server@2.1.1 \
+	@angular/common@2.2.0 \
+	@angular/compiler@2.2.0 \
+	@angular/compiler-cli@2.2.0 \
+	@angular/core@2.2.0 \
+	@angular/platform-browser@2.2.0 \
+	@angular/platform-server@2.2.0 \
 	rxjs@5.0.0-beta.12 \
-	typescript@2.0.3 \
+	typescript@2.0.9 \
 	zone.js@0.6.26
 
 VOLUME /test
