@@ -1,8 +1,10 @@
 /// <reference path="./typings/index.d.ts" />
 
 import {AppComponent} from './appcomponent';
-import {upgradeAdapter} from './appmodule';
+import {AppModule} from './appmodule';
 import {Ng1Component} from './ng1component';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {UpgradeModule} from '@angular/upgrade/static';
 
 
 const moduleName		= 'Test';
@@ -19,15 +21,13 @@ angular.
 	component(
 		Ng1Component.title,
 		Ng1Component.config
-	).
-	directive(
-		'testApp',
-		<angular.IDirectiveFactory>
-		upgradeAdapter.downgradeNg2Component(
-			AppComponent
-		)
 	)
 ;
 
 
-upgradeAdapter.bootstrap(document.body, [moduleName]);
+(async () => (
+	await platformBrowserDynamic().bootstrapModule(AppModule)
+).injector.get(UpgradeModule).bootstrap(
+	document.body,
+	[moduleName]
+))();
